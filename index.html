@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BalaFood calculates ingredient quantities for kindergarten meals." />
+  <title>BalaFood — Kindergarten meal calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="BalaFood home">
+      <span class="brand-mark">B</span>
+      <span>BalaFood</span>
+    </a>
+    <div class="header-actions">
+      <div class="language-switcher" aria-label="Choose language">
+        <button type="button" data-lang="kk">ҚАЗ</button>
+        <button type="button" data-lang="ru">РУС</button>
+        <button type="button" data-lang="en" class="active">ENG</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow" data-i18n="heroEyebrow">MEAL PLANNING, MADE SIMPLE</p>
+        <h1><span data-i18n="heroTitle">The right amount.</span><br><em data-i18n="heroAccent">For every child.</em></h1>
+        <p class="intro" data-i18n="heroIntro">Choose a dish and group size. BalaFood instantly prepares the ingredient quantities your kindergarten needs.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun">☀</div>
+        <div class="bowl">🥣</div>
+        <span class="leaf leaf-one">●</span>
+        <span class="leaf leaf-two">●</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-labelledby="calculator-title">
+      <div class="controls-card">
+        <div class="section-number">01</div>
+        <div>
+          <p class="eyebrow" data-i18n="calculator">CALCULATOR</p>
+          <h2 id="calculator-title" data-i18n="planMeal">Plan a meal</h2>
+        </div>
+
+        <label for="recipe" data-i18n="dish">Dish</label>
+        <input id="dish-quick-search" class="dish-quick-search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Search dishes or ingredients…" autocomplete="off" />
+        <select id="recipe"></select>
+        <button id="open-catalog" class="catalog-button" type="button"><span>☰</span><span data-i18n="allDishes">Open all dishes</span><strong id="recipe-count"></strong></button>
+
+        <label for="children" data-i18n="children">Number of children</label>
+        <div class="stepper">
+          <button id="minus" type="button" aria-label="Remove one child">−</button>
+          <input id="children" type="number" min="1" max="500" value="25" inputmode="numeric" />
+          <button id="plus" type="button" aria-label="Add one child">+</button>
+        </div>
+
+        <label for="servings" data-i18n="mealsPerChild">Meals per child</label>
+        <select id="servings">
+          <option value="1" data-serving="1">1 serving</option>
+          <option value="2" data-serving="2">2 servings</option>
+          <option value="3" data-serving="3">3 servings</option>
+        </select>
+
+        <label for="meal-slot" data-i18n="addToMenu">Add selected dish to menu</label>
+        <div class="add-menu-row">
+          <select id="meal-slot">
+            <option value="breakfast" data-i18n="breakfast">Breakfast</option>
+            <option value="lunch" data-i18n="lunch">Lunch</option>
+            <option value="dinner" data-i18n="dinner">Dinner</option>
+          </select>
+          <button id="add-to-menu" type="button" data-i18n="addDish">Add dish</button>
+        </div>
+
+        <div class="tip"><span>i</span><span data-i18n="tip">Amounts are based on one standard child serving.</span></div>
+      </div>
+
+      <div class="results-card">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow" data-i18n="ingredientList">INGREDIENT LIST</p>
+            <h2 id="result-title">Milk porridge</h2>
+          </div>
+          <div class="serving-pill"><strong id="total-servings">25</strong><span data-i18n="servings">servings</span></div>
+        </div>
+        <div id="ingredients" class="ingredient-list" aria-live="polite"></div>
+        <div class="total-row"><span data-i18n="totalWeight">Total ingredient weight</span><strong id="total-weight">—</strong></div>
+        <section class="food-nutrition-card" aria-labelledby="food-nutrition-title">
+          <div class="food-nutrition-head"><div><p class="eyebrow" data-i18n="perServingNutrition">PER-SERVING NUTRITION</p><h3 id="food-nutrition-title" data-i18n="basicInfo">Basic information</h3></div></div>
+          <div id="food-basic-info" class="food-basic-info"></div>
+          <h3 class="micro-title" data-i18n="micronutrients">Micronutrients</h3>
+          <div id="food-micronutrients" class="nutrition-summary food-micronutrients"></div>
+          <p id="food-nutrition-warning" class="nutrition-warning" hidden></p>
+        </section>
+        <div class="export-actions">
+          <button class="export-button export-primary" id="print-plan" type="button"><span>⌁</span><span data-i18n="print">Print</span></button>
+          <button class="export-button" id="pdf-plan" type="button"><span>PDF</span><span data-i18n="downloadPdf">Save PDF</span></button>
+          <button class="export-button" id="word-plan" type="button"><span>W</span><span data-i18n="downloadWord">Word</span></button>
+          <button class="export-button" id="excel-plan" type="button"><span>X</span><span data-i18n="downloadExcel">Excel</span></button>
+        </div>
+        <p class="export-hint" data-i18n="exportHint">Download or print this calculated meal plan.</p>
+      </div>
+    </section>
+
+    <section class="daily-menu" aria-labelledby="daily-menu-title">
+      <div class="daily-menu-head">
+        <div>
+          <p class="eyebrow" data-i18n="dailyMenuEyebrow">DAILY MENU BUILDER</p>
+          <h2 id="daily-menu-title" data-i18n="dailyMenuTitle">Plan the whole day.</h2>
+          <p class="menu-intro" data-i18n="dailyMenuIntro">Add several dishes to breakfast, lunch, and dinner. BalaFood combines all ingredients automatically.</p>
+        </div>
+        <div class="date-control"><label for="menu-date" data-i18n="menuDate">Menu date</label><input id="menu-date" type="date" /></div>
+      </div>
+
+      <div class="meal-columns">
+        <article class="meal-column breakfast-column">
+          <div class="meal-column-title"><span>☀</span><div><p>01</p><h3 data-i18n="breakfast">Breakfast</h3></div></div>
+          <div class="meal-items" id="breakfast-items"></div>
+        </article>
+        <article class="meal-column lunch-column">
+          <div class="meal-column-title"><span>◉</span><div><p>02</p><h3 data-i18n="lunch">Lunch</h3></div></div>
+          <div class="meal-items" id="lunch-items"></div>
+        </article>
+        <article class="meal-column dinner-column">
+          <div class="meal-column-title"><span>☾</span><div><p>03</p><h3 data-i18n="dinner">Dinner</h3></div></div>
+          <div class="meal-items" id="dinner-items"></div>
+        </article>
+      </div>
+
+      <div class="combined-card">
+        <div class="combined-head"><div><p class="eyebrow" data-i18n="combinedList">COMBINED LIST</p><h3 data-i18n="ingredientsForDay">Ingredients for the day</h3></div><button id="clear-menu" type="button" data-i18n="clearMenu">Clear menu</button></div>
+        <div id="combined-ingredients" class="combined-ingredients"></div>
+        <div class="menu-export-actions">
+          <button id="print-menu" type="button" data-i18n="printMenu">Print menu</button>
+          <button id="pdf-menu" type="button" data-i18n="downloadPdf">Save PDF</button>
+          <button id="word-menu" type="button" data-i18n="downloadWord">Word</button>
+          <button id="excel-menu" type="button" data-i18n="downloadExcel">Excel</button>
+        </div>
+      </div>
+
+      <div class="nutrition-card">
+        <div class="nutrition-head">
+          <div><p class="eyebrow" data-i18n="nutritionResults">NUTRITION RESULTS</p><h3 data-i18n="vitaminsAndMinerals">Vitamins and minerals</h3></div>
+          <div class="age-control"><label for="age-standard" data-i18n="ageStandard">Age standard</label><select id="age-standard"><option value="1-2">1–2</option><option value="3-6" selected>3–6</option></select></div>
+        </div>
+        <div class="nutrition-legend" aria-label="Nutrition color guide">
+          <span><i class="legend-low"></i><span data-i18n="belowTarget">Below target · under 75%</span></span>
+          <span><i class="legend-good"></i><span data-i18n="nearTarget">Near target · 75–119%</span></span>
+          <span><i class="legend-high"></i><span data-i18n="aboveTarget">Above target · 120%+</span></span>
+        </div>
+        <div id="nutrition-summary" class="nutrition-summary"></div>
+        <p id="nutrition-warning" class="nutrition-warning" hidden></p>
+        <p class="nutrition-source"><span data-i18n="nutritionSource">Reference intakes: NIH/NASEM dietary reference intakes. Dish values: technological recipe cards.</span> <a href="https://ods.od.nih.gov/HealthInformation/nutrientrecommendations.aspx" target="_blank" rel="noreferrer" data-i18n="viewSource">View source</a></p>
+      </div>
+    </section>
+
+    <section class="next-section">
+      <p class="eyebrow" data-i18n="nextEyebrow">WHAT COMES NEXT</p>
+      <h2 data-i18n="nextTitle">Built to grow with your kindergarten.</h2>
+      <div class="feature-grid">
+        <article><span>02</span><h3 data-i18n="recipeLibrary">Recipe library</h3><p data-i18n="recipeLibraryText">Add and edit your own dishes and serving sizes.</p></article>
+        <article><span>03</span><h3 data-i18n="weeklyMenu">Weekly menu</h3><p data-i18n="weeklyMenuText">Plan five days and combine everything into one list.</p></article>
+        <article><span>04</span><h3 data-i18n="costs">Costs & nutrition</h3><p data-i18n="costsText">Track the budget and nutrition for each child.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>BalaFood</span><span data-i18n="footer">Made for healthier, simpler kindergarten meals.</span></footer>
+  <div id="catalog" class="catalog" aria-hidden="true">
+    <button class="catalog-backdrop" type="button" aria-label="Close"></button>
+    <section class="catalog-panel" role="dialog" aria-modal="true" aria-labelledby="catalog-title">
+      <div class="catalog-header">
+        <div><p class="eyebrow" data-i18n="recipeDatabase">RECIPE DATABASE</p><h2 id="catalog-title" data-i18n="chooseDish">Choose a dish</h2></div>
+        <button id="close-catalog" class="close-button" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="catalog-tools">
+        <input id="recipe-search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Search dishes or ingredients…" />
+        <select id="category-filter" aria-label="Category"></select>
+      </div>
+      <p id="catalog-summary" class="catalog-summary"></p>
+      <div id="recipe-grid" class="recipe-grid"></div>
+    </section>
+  </div>
+  <script src="recipes-data.js"></script>
+  <script src="extra-recipes.js"></script>
+  <script src="food-translations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
