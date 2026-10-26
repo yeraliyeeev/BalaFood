@@ -2,15 +2,15 @@ const recipes = window.BALAFOOD_RECIPES || [];
 
 const translations = {
   en: {
-    heroEyebrow: "MEAL PLANNING, MADE SIMPLE", heroTitle: "The right amount.", heroAccent: "For every child.", heroIntro: "Choose a dish and group size. BalaFood instantly prepares the ingredient quantities your kindergarten needs.", calculator: "CALCULATOR", planMeal: "Plan a meal", dish: "Dish", children: "Number of children", mealsPerChild: "Meals per child", tip: "Amounts come from the official technological recipe cards.", ingredientList: "INGREDIENT LIST", servings: "servings", totalWeight: "Total ingredient weight", print: "Print", downloadPdf: "Save PDF", downloadWord: "Word", downloadExcel: "Excel", exportHint: "Download or print this calculated meal plan.", ingredient: "Ingredient", perServing: "Per child", requiredAmount: "Required amount", mealPlan: "Meal plan", nextEyebrow: "WHAT COMES NEXT", nextTitle: "Built to grow with your kindergarten.", recipeLibrary: "Recipe library", recipeLibraryText: "All available dishes from the preschool nutrition collection.", weeklyMenu: "Weekly menu", weeklyMenuText: "Plan five days and combine everything into one list.", costs: "Costs & nutrition", costsText: "Track the budget and nutrition for each child.", footer: "Made for healthier, simpler kindergarten meals.", perChild: "per child", serving: "serving", servingPlural: "servings", allDishes: "Open all dishes", recipeDatabase: "RECIPE DATABASE", chooseDish: "Choose a dish", searchPlaceholder: "Search dishes or ingredients…", allCategories: "All categories", found: "dishes found", noResults: "No matching dishes found", card: "Card", ingredients: "ingredients",
+    heroEyebrow: "MEAL PLANNING, MADE SIMPLE", heroTitle: "The right amount.", heroAccent: "For every child.", heroIntro: "Choose a dish and group size. BalaFood instantly prepares the ingredient quantities your kindergarten needs.", calculator: "CALCULATOR", planMeal: "Plan a meal", dish: "Dish", children: "Number of children", mealsPerChild: "Meals per child", tip: "Amounts come from the official technological recipe cards.", ingredientList: "INGREDIENT LIST", servings: "servings", totalWeight: "Total ingredients", print: "Print", downloadPdf: "Save PDF", downloadWord: "Word", downloadExcel: "Excel", exportHint: "Download or print this calculated meal plan.", ingredient: "Ingredient", perServing: "Per child", requiredAmount: "Required amount", mealPlan: "Meal plan", nextEyebrow: "WHAT COMES NEXT", nextTitle: "Built to grow with your kindergarten.", recipeLibrary: "Recipe library", recipeLibraryText: "All available dishes from the preschool nutrition collection.", weeklyMenu: "Weekly menu", weeklyMenuText: "Plan five days and combine everything into one list.", costs: "Costs & nutrition", costsText: "Track the budget and nutrition for each child.", footer: "Made for healthier, simpler kindergarten meals.", perChild: "per child", serving: "serving", servingPlural: "servings", allDishes: "Open all dishes", recipeDatabase: "RECIPE DATABASE", chooseDish: "Choose a dish", searchPlaceholder: "Search dishes or ingredients…", allCategories: "All categories", found: "dishes found", noResults: "No matching dishes found", card: "Card", ingredients: "ingredients",
     categories: { salads: "Salads", porridge: "Porridge", soups: "Soups", meat: "Meat dishes", fish: "Fish dishes", sides: "Side dishes", vegetables: "Vegetable dishes", eggs: "Egg dishes", cottageCheese: "Cottage cheese", flour: "Flour dishes", gastronomy: "Gastronomy", drinks: "Drinks", fruit: "Fruit", sauces: "Sauces", other: "Other" }
   },
   ru: {
-    heroEyebrow: "ПЛАНИРОВАНИЕ ПИТАНИЯ БЕЗ СЛОЖНОСТЕЙ", heroTitle: "Точное количество.", heroAccent: "Для каждого ребёнка.", heroIntro: "Выберите блюдо и количество детей. BalaFood мгновенно рассчитает необходимые ингредиенты для детского сада.", calculator: "КАЛЬКУЛЯТОР", planMeal: "Рассчитать питание", dish: "Блюдо", children: "Количество детей", mealsPerChild: "Порций на ребёнка", tip: "Количество взято из официальных технологических карт.", ingredientList: "СПИСОК ИНГРЕДИЕНТОВ", servings: "порций", totalWeight: "Общий вес ингредиентов", print: "Печать", downloadPdf: "Сохранить PDF", downloadWord: "Word", downloadExcel: "Excel", exportHint: "Скачайте или распечатайте рассчитанный план питания.", ingredient: "Ингредиент", perServing: "На ребёнка", requiredAmount: "Необходимое количество", mealPlan: "План питания", nextEyebrow: "СЛЕДУЮЩИЕ ВОЗМОЖНОСТИ", nextTitle: "BalaFood растёт вместе с вашим детским садом.", recipeLibrary: "Библиотека рецептов", recipeLibraryText: "Все доступные блюда из сборника дошкольного питания.", weeklyMenu: "Меню на неделю", weeklyMenuText: "Планируйте пять дней и объединяйте продукты в один список.", costs: "Стоимость и питание", costsText: "Контролируйте бюджет и пищевую ценность для каждого ребёнка.", footer: "Для простого и здорового питания в детском саду.", perChild: "на ребёнка", serving: "порция", servingPlural: "порции", allDishes: "Открыть все блюда", recipeDatabase: "БАЗА РЕЦЕПТОВ", chooseDish: "Выберите блюдо", searchPlaceholder: "Поиск блюд или ингредиентов…", allCategories: "Все категории", found: "блюд найдено", noResults: "Подходящие блюда не найдены", card: "Карта", ingredients: "ингредиентов",
+    heroEyebrow: "ПЛАНИРОВАНИЕ ПИТАНИЯ БЕЗ СЛОЖНОСТЕЙ", heroTitle: "Точное количество.", heroAccent: "Для каждого ребёнка.", heroIntro: "Выберите блюдо и количество детей. BalaFood мгновенно рассчитает необходимые ингредиенты для детского сада.", calculator: "КАЛЬКУЛЯТОР", planMeal: "Рассчитать питание", dish: "Блюдо", children: "Количество детей", mealsPerChild: "Порций на ребёнка", tip: "Количество взято из официальных технологических карт.", ingredientList: "СПИСОК ИНГРЕДИЕНТОВ", servings: "порций", totalWeight: "Общее количество ингредиентов", print: "Печать", downloadPdf: "Сохранить PDF", downloadWord: "Word", downloadExcel: "Excel", exportHint: "Скачайте или распечатайте рассчитанный план питания.", ingredient: "Ингредиент", perServing: "На ребёнка", requiredAmount: "Необходимое количество", mealPlan: "План питания", nextEyebrow: "СЛЕДУЮЩИЕ ВОЗМОЖНОСТИ", nextTitle: "BalaFood растёт вместе с вашим детским садом.", recipeLibrary: "Библиотека рецептов", recipeLibraryText: "Все доступные блюда из сборника дошкольного питания.", weeklyMenu: "Меню на неделю", weeklyMenuText: "Планируйте пять дней и объединяйте продукты в один список.", costs: "Стоимость и питание", costsText: "Контролируйте бюджет и пищевую ценность для каждого ребёнка.", footer: "Для простого и здорового питания в детском саду.", perChild: "на ребёнка", serving: "порция", servingPlural: "порции", allDishes: "Открыть все блюда", recipeDatabase: "БАЗА РЕЦЕПТОВ", chooseDish: "Выберите блюдо", searchPlaceholder: "Поиск блюд или ингредиентов…", allCategories: "Все категории", found: "блюд найдено", noResults: "Подходящие блюда не найдены", card: "Карта", ingredients: "ингредиентов",
     categories: { salads: "Салаты", porridge: "Каши", soups: "Супы", meat: "Мясные блюда", fish: "Рыбные блюда", sides: "Гарниры", vegetables: "Овощные блюда", eggs: "Блюда из яиц", cottageCheese: "Блюда из творога", flour: "Блюда из муки", gastronomy: "Гастрономия", drinks: "Напитки", fruit: "Фрукты", sauces: "Соусы", other: "Другое" }
   },
   kk: {
-    heroEyebrow: "ТАҒАМДЫ ОҢАЙ ЖОСПАРЛАУ", heroTitle: "Дәл мөлшер.", heroAccent: "Әр балаға.", heroIntro: "Тағамды және балалар санын таңдаңыз. BalaFood балабақшаға қажетті азық-түлік мөлшерін бірден есептейді.", calculator: "КАЛЬКУЛЯТОР", planMeal: "Тағамды есептеу", dish: "Тағам", children: "Балалар саны", mealsPerChild: "Бір балаға порция", tip: "Мөлшер ресми технологиялық карталардан алынған.", ingredientList: "АЗЫҚ-ТҮЛІК ТІЗІМІ", servings: "порция", totalWeight: "Азық-түліктің жалпы салмағы", print: "Басып шығару", downloadPdf: "PDF сақтау", downloadWord: "Word", downloadExcel: "Excel", exportHint: "Есептелген тамақ жоспарын жүктеп алыңыз немесе басып шығарыңыз.", ingredient: "Азық-түлік", perServing: "Бір балаға", requiredAmount: "Қажетті мөлшер", mealPlan: "Тамақ жоспары", nextEyebrow: "КЕЛЕСІ МҮМКІНДІКТЕР", nextTitle: "BalaFood балабақшаңызбен бірге дамиды.", recipeLibrary: "Рецепттер жинағы", recipeLibraryText: "Мектепке дейінгі тамақтану жинағындағы барлық тағамдар.", weeklyMenu: "Апталық мәзір", weeklyMenuText: "Бес күнді жоспарлап, азық-түлікті бір тізімге біріктіріңіз.", costs: "Баға және құндылық", costsText: "Әр балаға арналған бюджет пен тағамдық құндылықты бақылаңыз.", footer: "Балабақшадағы пайдалы әрі оңай тамақтану үшін.", perChild: "бір балаға", serving: "порция", servingPlural: "порция", allDishes: "Барлық тағамды ашу", recipeDatabase: "РЕЦЕПТТЕР БАЗАСЫ", chooseDish: "Тағамды таңдаңыз", searchPlaceholder: "Тағам немесе азық-түлік іздеу…", allCategories: "Барлық санат", found: "тағам табылды", noResults: "Сәйкес тағам табылмады", card: "Карта", ingredients: "азық-түлік",
+    heroEyebrow: "ТАҒАМДЫ ОҢАЙ ЖОСПАРЛАУ", heroTitle: "Дәл мөлшер.", heroAccent: "Әр балаға.", heroIntro: "Тағамды және балалар санын таңдаңыз. BalaFood балабақшаға қажетті азық-түлік мөлшерін бірден есептейді.", calculator: "КАЛЬКУЛЯТОР", planMeal: "Тағамды есептеу", dish: "Тағам", children: "Балалар саны", mealsPerChild: "Бір балаға порция", tip: "Мөлшер ресми технологиялық карталардан алынған.", ingredientList: "АЗЫҚ-ТҮЛІК ТІЗІМІ", servings: "порция", totalWeight: "Азық-түліктің жалпы мөлшері", print: "Басып шығару", downloadPdf: "PDF сақтау", downloadWord: "Word", downloadExcel: "Excel", exportHint: "Есептелген тамақ жоспарын жүктеп алыңыз немесе басып шығарыңыз.", ingredient: "Азық-түлік", perServing: "Бір балаға", requiredAmount: "Қажетті мөлшер", mealPlan: "Тамақ жоспары", nextEyebrow: "КЕЛЕСІ МҮМКІНДІКТЕР", nextTitle: "BalaFood балабақшаңызбен бірге дамиды.", recipeLibrary: "Рецепттер жинағы", recipeLibraryText: "Мектепке дейінгі тамақтану жинағындағы барлық тағамдар.", weeklyMenu: "Апталық мәзір", weeklyMenuText: "Бес күнді жоспарлап, азық-түлікті бір тізімге біріктіріңіз.", costs: "Баға және құндылық", costsText: "Әр балаға арналған бюджет пен тағамдық құндылықты бақылаңыз.", footer: "Балабақшадағы пайдалы әрі оңай тамақтану үшін.", perChild: "бір балаға", serving: "порция", servingPlural: "порция", allDishes: "Барлық тағамды ашу", recipeDatabase: "РЕЦЕПТТЕР БАЗАСЫ", chooseDish: "Тағамды таңдаңыз", searchPlaceholder: "Тағам немесе азық-түлік іздеу…", allCategories: "Барлық санат", found: "тағам табылды", noResults: "Сәйкес тағам табылмады", card: "Карта", ingredients: "азық-түлік",
     categories: { salads: "Салаттар", porridge: "Ботқалар", soups: "Сорпалар", meat: "Ет тағамдары", fish: "Балық тағамдары", sides: "Гарнирлер", vegetables: "Көкөніс тағамдары", eggs: "Жұмыртқа тағамдары", cottageCheese: "Сүзбе тағамдары", flour: "Ұн тағамдары", gastronomy: "Гастрономия", drinks: "Сусындар", fruit: "Жемістер", sauces: "Тұздықтар", other: "Басқа" }
   }
 };
@@ -127,7 +127,10 @@ const ingredientNameRules = {
 
 function ingredientName(rawName) {
   if (currentLanguage === "ru") return rawName;
-  const match = ingredientNameRules[currentLanguage].find(([pattern]) => pattern.test(rawName.trim()));
+  const match = ingredientNameRules[currentLanguage].find(([pattern]) => {
+    pattern.lastIndex = 0;
+    return pattern.test(rawName.trim());
+  });
   return match ? match[1] : rawName;
 }
 
@@ -139,7 +142,8 @@ const ingredientsEl = document.querySelector("#ingredients");
 const catalog = document.querySelector("#catalog");
 const searchInput = document.querySelector("#recipe-search");
 const categoryFilter = document.querySelector("#category-filter");
-let currentLanguage = localStorage.getItem("balafood-language") || "kk";
+const savedLanguage = localStorage.getItem("balafood-language");
+let currentLanguage = ["kk", "ru", "en"].includes(savedLanguage) ? savedLanguage : "kk";
 const mealSlots = ["breakfast", "lunch", "dinner"];
 let dailyMenu = (() => {
   try {
@@ -398,17 +402,18 @@ function calculate() {
   document.querySelector("#result-title").textContent = foodName(recipe);
   document.querySelector("#total-servings").textContent = multiplier;
   ingredientsEl.innerHTML = "";
-  let totalGrams = 0;
+  const totalsByUnit = { g: 0, ml: 0 };
   recipe.ingredients.forEach(item => {
     const total = item.amount * multiplier;
-    if (item.unit === "g" || item.unit === "ml") totalGrams += total;
+    if (Object.prototype.hasOwnProperty.call(totalsByUnit, item.unit)) totalsByUnit[item.unit] += total;
     const row = document.createElement("div");
     row.className = "ingredient";
     row.innerHTML = `<span class="ingredient-icon">${item.icon}</span><span><span class="ingredient-name"></span><span class="ingredient-base">${formatNumber(item.amount)} ${item.unit} ${translations[currentLanguage].perChild}</span></span><strong class="ingredient-amount">${niceAmount(total, item.unit)}</strong>`;
     row.querySelector(".ingredient-name").textContent = ingredientName(item.name);
     ingredientsEl.append(row);
   });
-  document.querySelector("#total-weight").textContent = niceAmount(totalGrams, "g");
+  const totalParts = Object.entries(totalsByUnit).filter(([, amount]) => amount > 0).map(([unit, amount]) => niceAmount(amount, unit));
+  document.querySelector("#total-weight").textContent = totalParts.join(" · ") || "—";
   renderFoodNutrition(recipe);
   document.querySelectorAll(".recipe-card").forEach(card => card.classList.toggle("selected", Number(card.dataset.index) === index));
 }
@@ -460,6 +465,7 @@ function closeCatalog() {
 }
 
 function setLanguage(lang) {
+  if (!translations[lang]) lang = "kk";
   currentLanguage = lang;
   localStorage.setItem("balafood-language", lang);
   document.documentElement.lang = lang;

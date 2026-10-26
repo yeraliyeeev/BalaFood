@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="kk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BalaFood calculates ingredient quantities for kindergarten meals." />
+  <meta name="description" content="BalaFood is a trilingual kindergarten meal calculator with 381 technological recipe cards, daily menu planning, nutrition summaries, and printable ingredient lists." />
+  <meta name="author" content="Assylkhan Yeraliyev" />
+  <meta name="theme-color" content="#173c35" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
   <title>BalaFood — Kindergarten meal calculator</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -152,7 +156,7 @@
         </div>
         <div id="nutrition-summary" class="nutrition-summary"></div>
         <p id="nutrition-warning" class="nutrition-warning" hidden></p>
-        <p class="nutrition-source"><span data-i18n="nutritionSource">Reference intakes: NIH/NASEM dietary reference intakes. Dish values: technological recipe cards.</span> <a href="https://ods.od.nih.gov/HealthInformation/nutrientrecommendations.aspx" target="_blank" rel="noreferrer" data-i18n="viewSource">View source</a></p>
+        <p class="nutrition-source"><span data-i18n="nutritionSource">Reference intakes: NIH/NASEM dietary reference intakes. Dish values: technological recipe cards.</span> <a href="https://ods.od.nih.gov/HealthInformation/nutrientrecommendations.aspx" target="_blank" rel="noopener noreferrer" data-i18n="viewSource">View source</a></p>
       </div>
     </section>
 
@@ -167,7 +171,7 @@
     </section>
   </main>
 
-  <footer><span>BalaFood</span><span data-i18n="footer">Made for healthier, simpler kindergarten meals.</span></footer>
+  <footer><span>BalaFood · Developed by Assylkhan Yeraliyev</span><span data-i18n="footer">Made for healthier, simpler kindergarten meals.</span></footer>
   <div id="catalog" class="catalog" aria-hidden="true">
     <button class="catalog-backdrop" type="button" aria-label="Close"></button>
     <section class="catalog-panel" role="dialog" aria-modal="true" aria-labelledby="catalog-title">

@@ -1,6 +1,19 @@
 # BalaFood
 
-BalaFood is a trilingual kindergarten meal calculator. It contains 345 technological recipe cards and calculates the required ingredient quantities for any number of children.
+**Developed by Assylkhan Yeraliyev**
+
+BalaFood is a trilingual kindergarten meal-planning calculator that scales ingredient quantities for any group size. It combines a searchable catalogue of technological recipe cards with daily menu planning, nutrition summaries, and printable or downloadable ingredient lists.
+
+## Project impact
+
+BalaFood began in 2024 as a 30-page Excel system created to simplify kindergarten menu calculations. The spreadsheet version was purchased by more than 35 kindergartens and generated approximately ₸700,000 in revenue. The project later evolved into this browser-based application.
+
+## Live application
+
+- **Website:** [yeraliyeeev.github.io/BalaFood](https://yeraliyeeev.github.io/BalaFood/)
+- **Source code:** [github.com/yeraliyeeev/BalaFood](https://github.com/yeraliyeeev/BalaFood)
+
+The application runs entirely in the browser. It does not require an account and does not send menu data to a server.
 
 ## Languages
 
@@ -10,56 +23,72 @@ BalaFood is a trilingual kindergarten meal calculator. It contains 345 technolog
 
 ## Features
 
-- Searchable catalogue of 345 dishes
-- 14 food categories
-- Search by dish or ingredient
-- Automatic ingredient scaling
-- Gram-to-kilogram conversion
-- Printable ingredient lists
-- Meal-plan export to Word and Excel
-- Print dialogue with Save as PDF support
-- Daily menu builder for breakfast, lunch, and dinner
-- Multiple dishes in each meal category
+- Searchable catalogue of 381 recipe cards across 14 categories
+- Search by dish or ingredient in three languages
+- Automatic ingredient scaling for 1–500 children
+- Gram-to-kilogram and millilitre-to-litre conversion
+- Breakfast, lunch, and dinner menu builder
+- Multiple dishes within each meal category
 - Combined daily ingredient list
-- Browser storage that keeps the menu after refresh
-- Vitamin and mineral totals for the daily menu
-- Age-based nutrient progress for ages 1–2 and 3–6
-- Responsive design for computers and phones
+- Per-serving macro- and micronutrient summaries
+- Age-based nutrition comparison for ages 1–2 and 3–6
+- Local browser storage for language and menu preferences
+- Printable meal plans with Save as PDF support
+- Word-compatible `.doc` and Excel-compatible `.xls` exports
+- Responsive desktop and mobile layout
 
-## Open the project in Visual Studio Code
+## Technology
 
-1. Extract `BalaFood.zip`.
-2. Open Visual Studio Code.
-3. Select **File → Open Folder**.
-4. Choose the extracted `BalaFood` folder.
-5. Install the **Live Server** extension if you do not already have it.
-6. Open `index.html`.
-7. Click **Go Live** in the bottom-right corner of Visual Studio Code.
+- Semantic HTML5
+- Responsive CSS
+- Vanilla JavaScript
+- Browser Local Storage
+- GitHub Pages
 
-You can also double-click `index.html`, but Live Server is recommended while developing.
+No framework, backend, account, tracking script, or external analytics service is required.
 
-## Project files
+## Run locally
 
-- `index.html` — page structure
-- `styles.css` — design and responsive layout
-- `app.js` — calculator, search, filters, and translations
-- `recipes-data.js` — dishes and ingredient quantities
+1. Download or clone the repository.
+2. Open the project folder in Visual Studio Code.
+3. Start `index.html` with the **Live Server** extension.
 
-## Upload to GitHub
+The site can also be opened directly from `index.html`, although a local server is recommended for development.
 
-Open the Visual Studio Code terminal and run:
+## Validate the recipe data
+
+Run the built-in validator with Node.js:
 
 ```bash
-git init
-git add .
-git commit -m "Initial BalaFood website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/balafood.git
-git push -u origin main
+node tests/validate-data.js
 ```
 
-Create an empty repository called `balafood` on GitHub before running the last two commands. Replace `YOUR_USERNAME` with your GitHub username.
+It checks recipe counts, unique IDs, categories, ingredient quantities, nutrition values, and translation coverage.
 
-## Data source
+## Project structure
 
-The recipe catalogue was extracted from the 2025–2026 collection of technological cards for a standard preschool menu by the Kazakh Academy of Nutrition, National Center for Healthy Nutrition, and UNICEF.
+```text
+index.html            Page structure and accessible controls
+styles.css            Visual design, responsive layout, and print styles
+app.js                Calculator, menus, exports, nutrition, and translations
+recipes-data.js       Core recipe-card dataset
+extra-recipes.js      Additional recipe cards and translations
+food-translations.js  Kazakh and English dish-name translations
+tests/                 Automated data-integrity checks
+```
+
+## Data and health notice
+
+Base quantities and dish values are derived from technological recipe cards used for preschool meal planning. Nutrition reference values link to NIH/NASEM dietary reference information. BalaFood is a planning aid, not medical advice; kindergartens should verify menus, allergens, serving standards, and newly added cards with their responsible medical or nutrition specialist.
+
+## Privacy
+
+Menu selections are stored only in the user's browser through Local Storage. BalaFood does not collect names, email addresses, analytics, or personal information.
+
+## Portfolio summary
+
+BalaFood demonstrates product design, multilingual interface development, structured food-data processing, proportional calculations, browser-based document export, responsive design, and the conversion of a working spreadsheet product into a public web application.
+
+## Copyright
+
+Copyright © 2026 Assylkhan Yeraliyev. All rights reserved.
